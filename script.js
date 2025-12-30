@@ -311,8 +311,8 @@
             firstName: /^[a-zA-ZÀ-ÿs-']{2,50}$/,
             lastName: /^[a-zA-ZÀ-ÿs-']{2,50}$/,
             name: /^[a-zA-ZÀ-ÿs-']{2,100}$/,
-            email: /^[^s@]+@[^s@]+.[^s@]+$/,
-            phone: /^[ds+-()]{10,20}$/,
+            email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            phone: /^[\d\s+\-()]{10,20}$/,
             message: /^.{10,}$/
         };
 
@@ -389,7 +389,7 @@
                     validateField(this);
                 });
 
-                input.addEventListener('input', function() {
+            input.addEventListener('input', function() {
                     if (this.classList.contains('is-invalid')) {
                         validateField(this);
                     }
